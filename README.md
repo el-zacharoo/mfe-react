@@ -29,3 +29,4 @@ Each module should be developed and tested independently to take advantage of Vi
 
 Local integration testing can be undertaken by following the steps above for each remote module included in the the build.
 # mfe-react
+# mfe-react
