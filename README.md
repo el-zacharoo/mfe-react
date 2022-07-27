@@ -12,16 +12,16 @@ yarn build
 yarn preview
 ```
 
-N.B. While remote modules can be run dynamically (`yarn start`), they can only be accessed when served from the `/dist` folder using `yarn preview`.
+N.B. While remote modules can be run dynamically (`yarn dev`), they can only be accessed when served from the `/dist` folder using `yarn preview`.
 
 ### Run the host module
 
 ```bash
 cd host
-yarn start
+yarn dev
 ```
 
-N.B. Unlike the remote module, the `host` module can be run dynamically (`yarn start` command).
+N.B. Unlike the remote module, the `host` module can be run dynamically (`yarn dev` command).
 
 ## Development
 
