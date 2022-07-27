@@ -18,9 +18,8 @@ export const Header = () => {
                     <Typography variant="h4">Zachs MFE's</Typography>
                 </Link>
                 <Box >
-                    <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/home" >Home</Button>
-                    <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/preview" >Preview</Button>
-                 
+                    <Button color="info" component={RouterLink} to="/home" >Home</Button>
+                    <Button color="info" component={RouterLink} to="/preview" >Preview</Button>
                 </Box>
             </Toolbar>
         </AppBar >

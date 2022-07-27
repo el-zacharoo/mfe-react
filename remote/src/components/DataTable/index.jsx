@@ -71,7 +71,6 @@ export const DataTable = (props) => {
             />
         </TableContainer >
     )
-
 }
 export default DataTable
 

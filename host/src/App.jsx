@@ -6,12 +6,12 @@ import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { Provider } from './Provider';
-import { DataFormat } from './DataFormat'
+import { DataFormat } from './DataFormat';
 
 import theme from 'components/theme';
 import Skeleton from 'components/Skeleton';
 import Viewport from 'components/Viewport';
-import MyRoutes from 'routes/MyRoutes'
+import MyRoutes from 'routes/MyRoutes'; 
 
 export const App = withAuthenticationRequired(() => {
   return (
@@ -44,7 +44,3 @@ const View = () => {
 
   )
 }
-
-
-
-
