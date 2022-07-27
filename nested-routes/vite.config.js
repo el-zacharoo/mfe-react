@@ -4,20 +4,18 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 import federation from "@originjs/vite-plugin-federation";
 
 export default defineConfig(() => {
-  return({
+return({
     plugins: [
       reactRefresh(),
       federation({
-        name: 'host',
-        remotes: { 
-          components: 'http://localhost:3001/assets/remoteEntry.js',
-          routes:  'http://localhost:3002/assets/remoteEntry.js'
+        name: 'routes',
+        exposes: {
+          './MyRoutes': 'src/App.jsx',
         },
         shared: [
           'react',
           'react-dom',
           '@mui/material',
-          'lodash.clonedeep',
           '@emotion/react',
           '@emotion/styled',
           'react-router-dom'
@@ -26,11 +24,11 @@ export default defineConfig(() => {
     ],
     server: {
       host: true, 
-      port: 3000
+      port: 3002
     },
     preview: {
       host: true, 
-      port: 3000
+      port: 3002
     }, 
     resolve: {
       alias: { '@': path.resolve(__dirname, './src') }
@@ -38,5 +36,5 @@ export default defineConfig(() => {
     build: {
       target: 'esnext',
     }
-    });
+  });
 })

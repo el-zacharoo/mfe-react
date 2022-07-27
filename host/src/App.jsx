@@ -11,6 +11,7 @@ import { DataFormat } from './DataFormat'
 import theme from 'components/theme';
 import Skeleton from 'components/Skeleton';
 import Viewport from 'components/Viewport';
+import MyRoutes from 'routes/MyRoutes'
 
 export const App = withAuthenticationRequired(() => {
   return (
@@ -23,7 +24,9 @@ export const App = withAuthenticationRequired(() => {
               <Routes>
                 <Route exact path="/" element={<View />} />
                 <Route exact path="/preview" element={<DataFormat />} />
+
               </Routes>
+              <MyRoutes />
             </Suspense>
           </Viewport >
         </Provider>
@@ -42,5 +45,7 @@ const View = () => {
 
   )
 }
+
+
 
 
