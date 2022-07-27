@@ -24,7 +24,6 @@ export const App = withAuthenticationRequired(() => {
               <Routes>
                 <Route exact path="/" element={<View />} />
                 <Route exact path="/preview" element={<DataFormat />} />
-
               </Routes>
               <MyRoutes />
             </Suspense>
