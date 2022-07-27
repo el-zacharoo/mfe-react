@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 export const Header = () => {
     return (
@@ -16,8 +17,11 @@ export const Header = () => {
                 <Link underline="none" sx={{ display: 'flex', '& svg': { fontSize: '2rem', mr: 1 }, alignItems: 'center', color: 'info.main' }} component={RouterLink} to="/">
                     <Typography variant="h4">Zachs MFE's</Typography>
                 </Link>
-                <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/preview" >Preview</Button>
-                <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/home" >Home</Button>
+                <Box >
+                    <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/home" >Home</Button>
+                    <Button sx={{ textTransform: 'capitalize' }} color="info" component={RouterLink} to="/preview" >Preview</Button>
+                 
+                </Box>
             </Toolbar>
         </AppBar >
     )
