@@ -13,7 +13,6 @@ export default defineConfig(() => {
           components: 'http://localhost:3001/assets/remoteEntry.js'
         },
         shared: [
-          // '@auth0/auth0-react',
           'react',
           'react-dom',
           '@mui/material',

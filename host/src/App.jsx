@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import CssBaseline from '@mui/material/CssBaseline';

@@ -23,7 +23,6 @@ export const DataFormat = () => {
 
     const counts = {};
     row.map(i => i.countrycode).forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
-    console.log(counts)
 
     return (
         <>
