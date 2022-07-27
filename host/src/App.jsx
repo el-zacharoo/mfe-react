@@ -1,30 +1,36 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import { Provider } from './Provider';
+import { DataFormat } from './DataFormat'
 
 import theme from 'components/theme';
 import Skeleton from 'components/Skeleton';
 import Viewport from 'components/Viewport';
 
-export const App = () => {
+export const App = withAuthenticationRequired(() => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Viewport >
-          <Suspense fallback={<Skeleton visible />}>
-            <Routes>
-              <Route exact path="/" element={<View />} />
-              <Route exact path="/preview" element={<Preview />} />
-            </Routes>
-          </Suspense>
-        </Viewport >
+        <Provider>
+          <Viewport >
+            <Suspense fallback={<Skeleton visible />}>
+              <Routes>
+                <Route exact path="/" element={<View />} />
+                <Route exact path="/preview" element={<DataFormat />} />
+              </Routes>
+            </Suspense>
+          </Viewport >
+        </Provider>
       </Router>
     </ThemeProvider>
   )
-}
+})
 
 export default App
 
@@ -37,11 +43,4 @@ const View = () => {
   )
 }
 
-const Preview = () => {
-  return (
-    <h1>
-      Hello Preview
-    </h1>
 
-  )
-}

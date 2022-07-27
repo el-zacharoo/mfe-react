@@ -15,8 +15,7 @@ export const Viewport = ({ children }) => {
             minHeight: '100vh',
         }}>
             <Header />
-            <Container
-            >
+            <Container sx={{ my: '2rem' }}>
                 {children}
             </Container>
             <Footer />
